@@ -18,7 +18,7 @@ jobs:
     - name: Exam
       run: helm lint
     - name: Template
-      run: helm template .
+      run: helm template . --debug
   
     # # Checks that all Terraform configuration files adhere to a canonical format
     # - name: Terraform Format
