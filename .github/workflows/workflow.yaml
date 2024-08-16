@@ -1,0 +1,29 @@
+name: 'Helm'
+
+on:
+  pull_request:
+
+# permissions:
+#   contents: read
+
+jobs:
+  build:
+    name: 'Validate'
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Exam
+      uses: actions/checkout@v4
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Exam
+      run: helm lint
+    - name: Template
+      run: helm template .
+  
+    # # Checks that all Terraform configuration files adhere to a canonical format
+    # - name: Terraform Format
+    #   run: terraform fmt -check
+
+    # # Checks that all Terraform configuration files adhere to a canonical format
+    # - name: Terraform Validate
+    #   run: terraform validate
