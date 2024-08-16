@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v4
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Exam
-      run: helm lint
+      run: helm lint --strict
     - name: Template
       run: helm template .
   
