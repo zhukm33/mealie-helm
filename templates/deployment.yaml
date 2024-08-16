@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: {{ .Values.name }}
+      app: {{ .Values.somethingelse }}
   template:
     metadata:
       labels:
