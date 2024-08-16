@@ -1,0 +1,26 @@
+name: "mealie"
+image:
+  repo: "ghcr.io/mealie-recipes/mealie"
+  version: "v1.10.2"
+
+environment:
+  allowSignup: "false"
+  timezone: "America/Chicago"
+
+resources:
+  limits:
+    memory: "3Gi"
+    cpu: "1.5"
+
+deployment:
+  containerPort: 9000
+
+service:
+  port: 9000
+  targetPort: 9000
+
+ingress:
+  host: "mealie.dev.ernestdevops.net"
+  ingressClassName: "alb"
+  loadBalancerName: "mealie-ingress-alb-my-new-name"
+  subnets: "subnet-0913c3113f70625b7,subnet-01aa0f5cf264bfba9,subnet-087d95287beb61f8b"
