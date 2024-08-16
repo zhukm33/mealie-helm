@@ -1,4 +1,4 @@
-name: "mealie"
+
 image:
   repo: "ghcr.io/mealie-recipes/mealie"
   version: "v1.10.2"
